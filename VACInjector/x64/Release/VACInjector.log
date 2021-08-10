@@ -1,0 +1,7 @@
+﻿  Injector.cpp
+C:\Users\andre\Documents\CheatingStuff\Repos\CSGO-VAC-INJECTOR-main\VACInjector\Injector.cpp(19,20): error C2664: 'int _stricmp(const char *,const char *)': cannot convert argument 1 from 'WCHAR [260]' to 'const char *'
+C:\Users\andre\Documents\CheatingStuff\Repos\CSGO-VAC-INJECTOR-main\VACInjector\Injector.cpp(19,41): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(189,22): message : see declaration of '_stricmp'
+C:\Users\andre\Documents\CheatingStuff\Repos\CSGO-VAC-INJECTOR-main\VACInjector\Injector.cpp(35,74): error C2664: 'DWORD GetFullPathNameW(LPCWSTR,DWORD,LPWSTR,LPWSTR *)': cannot convert argument 1 from 'const char [28]' to 'LPCWSTR'
+C:\Users\andre\Documents\CheatingStuff\Repos\CSGO-VAC-INJECTOR-main\VACInjector\Injector.cpp(35,21): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\fileapi.h(758,1): message : see declaration of 'GetFullPathNameW'
