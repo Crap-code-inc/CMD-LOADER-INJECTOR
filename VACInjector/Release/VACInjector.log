@@ -1,9 +1,8 @@
-﻿  Animations.cpp
+﻿  Injector.cpp
   The contents of <filesystem> are available only with C++17 or later.
-C:\Users\andre\Documents\Cheat\Injectors\CSGO-VAC-INJECTOR-main\VACInjector\Animations.cpp(64,10): warning C4129: ' ': unrecognized character escape sequence
   Generating code
-  1 of 138 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+  5 of 137 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  VACInjector.vcxproj -> C:\Users\andre\Documents\Cheat\Injectors\CSGO-VAC-INJECTOR-main\Release\VACInjector.exe
+  VACInjector.vcxproj -> Z:\Cheat\Injectors\CMD-LOADER-INJECTOR\Release\VACInjector.exe

@@ -5,7 +5,7 @@
 void injectCSGO() {
 	//Downloading dll
 	string location = "DLL.dll";
-	string url = "http://javel.dk/DLL.dll";
+	string url = "PUT-A-URL-HERE-FOR-THE-DLL-DOWNLOAD";
 	LPCSTR lpcURL = url.c_str();
 	LPCSTR lpclocation = location.c_str();
 	HRESULT hr = URLDownloadToFile(NULL, lpcURL, lpclocation, 0, NULL);
@@ -20,11 +20,12 @@ void injectCSGO() {
 
 	if (proc_id) {
 		cout << "[+] Proccess found, waiting for bootup" << endl;
-		cout << "[*] Injecting in 30 secounds \n";
-		Sleep(30000);
+		cout << "[+] Injecting in 15 secounds \n";
+		cout << "[+] CSGO PROCCESS ID -> \n" << proc_id << endl;
+		Sleep(15000);
 		if (DoesFileExist("DLL.dll")) {
 			cout << "[*] INJECTION STARTED \n" << endl;
-			if (LoadLibraryInject2(proc_id, "DLL.dll")) {
+			if (LoadLibraryInject(proc_id, "DLL.dll")) {
 				Sleep(2000);
 			}
 			else {
@@ -54,11 +55,12 @@ void injectCustom() {
 
 	if (proc_id) {
 		cout << "[+] Proccess found, waiting for bootup" << endl;
-		cout << "[*] Injecting in 30 secounds \n";
-		Sleep(30000);
-		if (injectorMethod == 1) {
-			if (DoesFileExist("DLL.dll")) {
-				cout << "[*] INJECTION STARTED \n" << endl;
+		cout << "[*] Injecting in 15 secounds \n";
+		Sleep(15000);
+		//if (injectorMethod == 1) {
+			if (DoesFileExist("CUSTOM.dll")) {
+				cout << "[+] INJECTION STARTED \n" << endl;
+				cout << "[+] CSGO PROCCESS ID -> \n" << proc_id << endl;
 				if (LoadLibraryInject(proc_id, "CUSTOM.dll")) {
 					cout << "Injecting" << endl;
 					Sleep(2000);
@@ -74,8 +76,8 @@ void injectCustom() {
 				system("pause");
 				ExitProcess(0);
 			}
-		}
-		else if (injectorMethod == 2) {
+		//}
+		/*else if (injectorMethod == 2) {
 			if (DoesFileExist("DLL.dll")) {
 				cout << "Injection started" << endl;
 				if (LoadLibraryInject2(proc_id, "CUSTOM.dll")) {
@@ -99,7 +101,7 @@ void injectCustom() {
 			system("pause");
 			Sleep(5000);
 			ExitProcess(0);
-		}
+		}*/
 
 	}
 

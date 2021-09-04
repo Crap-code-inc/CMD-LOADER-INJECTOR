@@ -95,7 +95,7 @@ void getHWIDdata() {
 	system("pause");
 }
 
-bool LoadLibraryInject(DWORD ProcessId, const char* Dll)
+/*bool LoadLibraryInject(DWORD ProcessId, const char* Dll)
 {
 	SetConsoleTextAttribute(fConsole, 2);
 	cout << "[*] INJECTION METHOD 1";
@@ -126,11 +126,34 @@ bool LoadLibraryInject(DWORD ProcessId, const char* Dll)
 
 	return TRUE;
 }
+*/
 bool LoadLibraryInject2(DWORD ProcessId, const char* Dll)
 {
 	SetConsoleTextAttribute(fConsole, 2);
 	cout << "[*] INJECTION METHOD 2";
 	SetConsoleTextAttribute(fConsole, 4);
+	if (ProcessId == NULL)
+		return false;
+
+	char CustomDLL[MAX_PATH];
+	GetFullPathName(Dll, MAX_PATH, CustomDLL, 0);
+
+	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessId);
+	LPVOID allocatedMem = VirtualAllocEx(hProcess, NULL, sizeof(CustomDLL), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+
+	if (!WriteProcessMemory(hProcess, allocatedMem, CustomDLL, sizeof(CustomDLL), NULL))
+		return FALSE;
+
+	CreateRemoteThread(hProcess, 0, 0, (LPTHREAD_START_ROUTINE)LoadLibrary, allocatedMem, 0, 0);
+
+	if (hProcess)
+		CloseHandle(hProcess);
+
+	return TRUE;
+}
+
+bool LoadLibraryInject(DWORD ProcessId, const char* Dll)
+{
 	if (ProcessId == NULL)
 		return false;
 
