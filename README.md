@@ -6,4 +6,4 @@ Publishing since im moving to actual GUI's - although this is a prestine CMD men
 
 Feel free to use as you wish, i dont mind :)
 
-![GIF showing program in use](https://media3.giphy.com/media/5vQipCDwV1UcJJ7L35/giphy.gif?cid=790b7611f16c42891f61af95bd02d5675433863610a29544&rid=giphy.gif&ct=g)
+![GIF showing program in use](https://media2.giphy.com/media/55hBFApWHEqJXcjdNC/giphy.gif?cid=790b7611fbed7d2b8af8056ee5dfeffc1cf0eaa3c16e7c93&rid=giphy.gif&ct=g)
