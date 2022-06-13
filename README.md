@@ -1,5 +1,5 @@
 # CSGO-V4C-INJECTOR
-CS:GO Inj3ctor which bypasses 4nticheat
+CS:GO Inj3ctor which bypasses 4nticheat.
 
 Simply something i wrote because i was bored, and tbh it was cool to learn.
 Publishing since im moving to actual GUI's - although this is a prestine CMD menu.
